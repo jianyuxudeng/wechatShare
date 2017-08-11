@@ -16,8 +16,8 @@ http.listen(8080, function() {
 
 app.get("/get_signature", function(req, res) {
 	var url = (req.url).split("url=")[1];
-	var appId = "wxbf52b89ac6da63b0";
-    var appSecret = "c3b6d4d5e911cf7bdaa43a914fe6ea0b"; 
+	var appId = "微信公众号appId";
+    var appSecret = "微信公众号appSecret"; 
 	getSignPackage(url,appId,appSecret,function(data){
 		res.jsonp(JSON.parse(data))
 	})
